@@ -1,0 +1,283 @@
+{
+  "name": "LD49",
+  "ogmoVersion": "3.3.0",
+  "levelPaths": ["."],
+  "backgroundColor": "#000000ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "layerGridDefaultSize": {"x": 11, "y": 11},
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 128, "y": 128},
+  "levelMaxSize": {"x": 8192, "y": 8192},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "compactExport": false,
+  "externalScript": "",
+  "playCommand": "",
+  "entityTags": ["collide", "light"],
+  "layers": [
+    {
+      "definition": "entity",
+      "name": "Entities",
+      "gridSize": {"x": 11, "y": 11},
+      "exportID": "12849368",
+      "requiredTags": [],
+      "excludedTags": ["collide"]
+    },
+    {
+      "definition": "tile",
+      "name": "Floor Layer",
+      "gridSize": {"x": 11, "y": 11},
+      "exportID": "12839192",
+      "exportMode": 0,
+      "arrayMode": 1,
+      "defaultTileset": "Tileset"
+    },
+    {
+      "definition": "entity",
+      "name": "Floor Collide",
+      "gridSize": {"x": 11, "y": 11},
+      "exportID": "13094046",
+      "requiredTags": ["collide"],
+      "excludedTags": []
+    },
+    {
+      "definition": "tile",
+      "name": "Background",
+      "gridSize": {"x": 11, "y": 11},
+      "exportID": "12839596",
+      "exportMode": 0,
+      "arrayMode": 1,
+      "defaultTileset": "Tileset"
+    }
+  ],
+  "entities": [
+    {
+      "exportID": "12856033",
+      "name": "Player",
+      "limit": -1,
+      "size": {"x": 11, "y": 18},
+      "origin": {"x": 5.5, "y": 9},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#ff0000ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 11, "y": 18},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 1,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": []
+    },
+    {
+      "exportID": "13094448",
+      "name": "Collide",
+      "limit": -1,
+      "size": {"x": 11, "y": 11},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#d90ddcff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 11, "y": 11},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["collide"],
+      "values": []
+    },
+    {
+      "exportID": "14746187",
+      "name": "MeleeEnemy",
+      "limit": -1,
+      "size": {"x": 11, "y": 18},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#12ff00ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 11, "y": 18},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": []
+    },
+    {
+      "exportID": "15354294",
+      "name": "RangedEnemy",
+      "limit": -1,
+      "size": {"x": 11, "y": 18},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#00d6ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 11, "y": 18},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": []
+    },
+    {
+      "exportID": "17264191",
+      "name": "Light",
+      "limit": -1,
+      "size": {"x": 11, "y": 11},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#faff00ff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 11, "y": 11},
+      "resizeableX": false,
+      "resizeableY": false,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": ["light"],
+      "values": [
+        {"name": "color", "definition": "Color", "defaults": "#ffffffff", "includeAlpha": false},
+        {"name": "radius", "definition": "Float", "defaults": 200, "bounded": false, "min": 0, "max": 500},
+        {"name": "flicker", "definition": "Float", "defaults": 0.1, "bounded": true, "min": 0, "max": 1},
+        {"name": "intensity", "definition": "Float", "defaults": 1, "bounded": true, "min": 0, "max": 10}
+      ]
+    },
+    {
+      "exportID": "26543927",
+      "name": "LevelEnd",
+      "limit": -1,
+      "size": {"x": 11, "y": 11},
+      "origin": {"x": 0, "y": 0},
+      "originAnchored": true,
+      "shape": {
+        "label": "Rectangle",
+        "points": [
+          {"x": -1, "y": -1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": -1},
+          {"x": -1, "y": 1},
+          {"x": 1, "y": 1}
+        ]
+      },
+      "color": "#0400ffff",
+      "tileX": false,
+      "tileY": false,
+      "tileSize": {"x": 11, "y": 11},
+      "resizeableX": true,
+      "resizeableY": true,
+      "rotatable": false,
+      "rotationDegrees": 360,
+      "canFlipX": false,
+      "canFlipY": false,
+      "canSetColor": false,
+      "hasNodes": false,
+      "nodeLimit": 0,
+      "nodeDisplay": 0,
+      "nodeGhost": true,
+      "tags": [],
+      "values": [
+        {"name": "next", "definition": "String", "defaults": "", "maxLength": 0, "trimWhitespace": true}
+      ]
+    }
+  ],
+  "tilesets": [
+    {"label": "Tileset", "path": "../images/tileset.png", "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG4AAABuCAMAAADxhdbJAAAAAXNSR0IArs4c6QAAAc5QTFRF9pmI82xg6E5A5Rwj3Rkd0BcWxBQRsBIK9I+x8GKS7EB66R5j2BtgwhhbrRRXiA5PzpPYumjIq0e8nCewjiSqex+iahuaShSMs53blXXNflfCZzq3XjWxUS2oRSegMRuSn6jaeYbLXGvAP1G1OUmrMD+fKDWTGiN+r7//kaf/c4/+Vnf8TmzvRV7eO1DOKjaxgdT6T8P3Kbb2A6n0A5vlAojRAne9AVebgN7qTdDhJsbaALzUAKzBAJenAIOPAGBkgMvETbasJqaaAJaIAIl7AHlrAGlcAE1ActVyQr1BK68rJZskCo8ICn4HBW8ADVMCxeGlrtWBnMxli8NKfLNCaJ84VYsvM2ke5u6c3Od11OFXzdw5wMozr7Qrnp0kgncX//Wd//F2/+5Y/+s7/dg1+8At+agl9X8X/+CC/9VP/8oo/8EH/7MA/6AA/48A/28A/8yA/7dN/6cm/5gA+4wA9XwA72wA5lEA/6uR/4pl/3BD/1ci9FEe5koZ2EMVvzYMvKqkoYh/jW5jeVVIbUxBXUA3TjQuPicj7u7u4ODgvb29np6edXV1YWFhQkJCISEhsL7FkKSueJCcYH2LVG56RVpkN0dPJjI4AAAA////V2RexgAAAJp0Uk5TAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////4vC7tcAAAAsSURBVGiB7c0xAQAACAOg9Q9gXs818BEKkKkc0Ol0OgAAAAAAAAAAAAD4YQEUrUbn8ob22QAAAABJRU5ErkJggg==", "tileWidth": 11, "tileHeight": 11, "tileSeparationX": 0, "tileSeparationY": 0}
+  ]
+}
