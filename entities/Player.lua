@@ -193,9 +193,11 @@ function Player:applyToEnemiesInAbility(callback)
   if self.activeAbility and self.activeAbility.distance then
     local aMinX, aMinY, aMaxX, aMaxY = self:getAbilityBoundingBox()
     for enemy in Enemy.all:iterate() do
-      local eMinX, eMinY, eMaxX, eMaxY = enemy.fixture:getBoundingBox()
-      if aMinX < eMaxX and eMinX < aMaxX and aMinY < eMaxY and eMinY < aMaxY then
-        callback(enemy)
+      if enemy.fixture and enemy.world == self.world then
+        local eMinX, eMinY, eMaxX, eMaxY = enemy.fixture:getBoundingBox()
+        if aMinX < eMaxX and eMinX < aMaxX and aMinY < eMaxY and eMinY < aMaxY then
+          callback(enemy)
+        end
       end
     end
   end

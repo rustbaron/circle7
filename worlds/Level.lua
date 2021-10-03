@@ -22,6 +22,7 @@ function Level:initialize(levelName, playerHealth)
   self.shakeTimer = 0
   self.initPlayerHealth = playerHealth or 100
 
+  Enemy.all:clear()
   self:addTiles()
   self:addEntities()
   self.hud = HUD:new()
