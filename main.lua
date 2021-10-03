@@ -28,6 +28,7 @@ require("entities.LevelEnd")
 TILE_SIZE = 11
 TIME_SCALE = 1
 GLITCH_SCALE = 0.1
+LAST_LEVEL = "1"
 local timeElapsed = 0
 
 function love.load()
@@ -69,6 +70,22 @@ function love.update(dt)
   if GLITCH_SCALE > 0.1 then
     GLITCH_SCALE = GLITCH_SCALE - 0.2 * dt
   end
+  if input.pressed("music") then
+    if BG_MUSIC:isPlaying() then
+      BG_MUSIC:pause()
+    else
+      BG_MUSIC:play()
+    end
+  end
+  if input.pressed("quit") then
+    if ammo.world.name ~= "title" then
+      tween(_G, 2, {GLITCH_SCALE = 20}, ease.quadIn, function()
+        ammo.world = TitleScreen:new()
+      end)
+    else
+      love.event.quit()
+    end
+  end
   ammo.update(dt)
   postfx.update(dt)
   timeElapsed = timeElapsed + dt
@@ -89,11 +106,6 @@ end
 
 function love.keypressed(key, code)
   if key == "m" then
-    if BG_MUSIC:isPlaying() then
-      BG_MUSIC:pause()
-    else
-      BG_MUSIC:play()
-    end
   end
 
   input.keypressed(key)
@@ -127,6 +139,8 @@ function defineInputMappings()
   input.define{"heavy", key = "lshift", mouse = 3}
   input.define{"parry", mouse = 2}
   input.define("continue", "return")
+  input.define("quit", "escape")
+  input.define("music", "m")
 end
 
 function glitchDamage(amount)

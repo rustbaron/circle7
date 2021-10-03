@@ -43,6 +43,9 @@ function Level:start()
   PhysicalWorld.start(self)
   TIME_SCALE = 1
   GLITCH_SCALE = 1
+  if self.name ~= "title" then
+    LAST_LEVEL = self.name
+  end
   self.camera.x = self.player.x
   self.camera.y = self.player.y
   self.camera:bind()

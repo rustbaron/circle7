@@ -21,7 +21,7 @@ function TitleScreen:update(dt)
   if input.pressed("continue") then
     if self.shownInstructions then
       tween(_G, 2, {GLITCH_SCALE = 20}, ease.quadIn, function()
-        ammo.world = Level:new("1")
+        ammo.world = Level:new(LAST_LEVEL)
       end)
     else
       self.hud:showInstructions()

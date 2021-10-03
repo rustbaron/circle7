@@ -22,10 +22,10 @@ function HUD:initialize()
     x=0, y=rawHeight / 2 + 100, width=rawWidth, padding=25, font=assets.fonts.main[60], shadow=true
   }
   self.instructions = Text:new{
-    text="Move -> A / D\nJump -> W / Space\nLight attack -> Left click\nStrong attack -> Shift / middle click\nParry -> Right click",
+    text="Move -> A / D\nJump -> W / Space\nLight attack -> Left click\nStrong attack -> Shift / middle click\nParry -> Right click\nQuit -> Escape",
     x=0, width=rawWidth, padding=25, font=assets.fonts.main[48], shadow=true
   }
-  self.instructions.y = rawHeight - self.instructions.fontHeight * 5 - 50
+  self.instructions.y = rawHeight - self.instructions.fontHeight * 6 - 50
   self.instructions.color[4] = 0
   self.instructions2 = Text:new{
     text="Deal damage to increase stability\nParry just before an attack lands\nParry both melee and projectiles\nCombine light and heavy attacks\nKeep moving",
